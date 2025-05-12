@@ -22,8 +22,10 @@ if(owners.length>0){
   })
 }
 
-router.get('/',(req,res)=>{
-  res.send("hey")
+router.get('/admin',(req,res)=>{
+  let success=req.flash("success")
+  res.render("createproducts",{success})
+  // res.send("yes");
 })
 
 module.exports=router;
